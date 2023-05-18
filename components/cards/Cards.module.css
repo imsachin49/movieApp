@@ -1,0 +1,116 @@
+.cardsContainer{
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.cards {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: .5rem;
+    border: 1pcx solid red;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    margin: .5rem;
+}
+
+.card {
+  color: white;
+  padding: 1rem;
+}
+
+.categoryHeading{
+    text-align:start;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    color:rgb(244, 51, 151);
+}
+  
+@media (min-width: 600px) {
+   .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1200px) {
+    .cards { grid-template-columns: repeat(4, 1fr);} 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+  
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.pagination button:hover {
+    background-color: #ccc;
+    background-color: rgb(244, 51, 151);
+    color: white;
+}
+  
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+  
+.pagination span {
+    font-weight: bold;
+    padding: 5px 10px;
+    /* border:rgb(244, 51, 151) 1px solid; */
+    color:black;
+    color: #e0e0e0;
+    border-radius: 50%;
+    font-size: 27px;
+    font-family: Source Sans\ 3,sans-serif;
+}
+
+.pages{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagess{
+    display: flex;
+    font-size: 27px;
+    border: 1px solid gray;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+    color: white;
+    border-radius: 5px;
+    font-family: Source Sans\ 3,sans-serif;
+}
+
+.loading{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

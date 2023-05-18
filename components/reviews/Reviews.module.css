@@ -1,0 +1,51 @@
+.reviewContainer{
+    width: 100%;
+    border: 1px solid red;
+    margin-top: 1rem;
+}
+
+.reviewList{
+    border: 1px solid green;
+    margin-top: 1rem;
+}
+
+.review{
+    border: 1px solid #e4e4e4;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.noReview{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.person{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.reviewHeading{
+    margin: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.both{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.both img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+

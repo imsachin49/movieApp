@@ -1,0 +1,124 @@
+.cardConatiner{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    /* border: 1px solid #ccc; */
+}
+
+.cardConatiner:hover{
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.imgContainer {
+  width: auto;
+  height: 300px; 
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: none;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border: 1px solud rgb(221, 221, 221);
+}
+
+.textContainer{
+    color: black;
+    text-align: start;
+    padding: 10px;
+    border: 1px solid rgb(214, 215, 216);
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.date{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 7px 0;
+}
+
+.genreContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 1px;
+}
+
+.genre{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 1px;
+    padding: 2px 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.boxes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 5px;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+}
+
+.boxText{
+  font-size: 1rem;
+  font-weight: 590;
+  color: black;
+}
+
+.nowBtn{
+  display: flex;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #f5c518;
+  color:white;
+  font-weight: bold;
+  font-size: 13px;
+  border-color: white;
+  background-color: rgb(244, 51, 151);
+  text-decoration: none;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.lang{
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 7px 0;
+  border: 1px solid rgb(214, 215, 216);
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: #f5c518;
+  color: white;
+}
