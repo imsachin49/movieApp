@@ -13,7 +13,7 @@ const Navbar = () => {
   
   const search = async() => {
     // `/movie/${id}?title=${encodeURIComponent(title)}
-    router.push(`?title=${searchTerm}`);
+    router.push(`/?title=${searchTerm}`);
     // setSearchTerm('');
   } 
 
@@ -45,7 +45,7 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <Link className={styles.logo} href={`/`}>
-          <img src='https://cdn-icons-png.flaticon.com/128/5395/5395925.png' alt="logo" width={33} height={33}  />
+          <Image src='https://cdn-icons-png.flaticon.com/128/5395/5395925.png' alt="logo" width={33} height={33}  />
           <p className={styles.logoText}>Movie<span className={styles.second}>App</span></p>
         </Link>
         <div className={`${styles.navComponents} ${isMenuOpen ? styles.isMobile : ''}`}>

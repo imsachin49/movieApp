@@ -8,6 +8,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import axios from 'axios';
 import Link from 'next/link';
 import iso6391 from 'iso-639-1';
+import Image from 'next/image'
 
 const Card = ({movie,title}) => {
   // console.log(movie)
@@ -43,15 +44,15 @@ const Card = ({movie,title}) => {
       return `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     } else {
       return 'https://www.movienewz.com/img/films/poster-holder.jpg';
+      // hostname of above url is..
+      
     }
   };
 
   return (
     <Link className={styles.cardConatiner} href={`/movie/${movie.id}`}>
       <div className={styles.imgContainer}>
-        <img src={
-          getPoster()
-        } alt={movie.title} />
+        <Image src={getPoster()} height={300} width={220}  alt={movie.title} />
       </div>
       <div className={styles.textContainer}>
         <div className={styles.top}>

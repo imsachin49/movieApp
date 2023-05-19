@@ -59,7 +59,7 @@ const Cards = ({ title }) => {
       {!loading ? 
         <div className={styles.cards}>
         {movies.map(m => (
-          <div key={m.title} className={styles.card}>
+          <div className={styles.card}>
             <Card movie={m} title={title} />
           </div>
         ))}

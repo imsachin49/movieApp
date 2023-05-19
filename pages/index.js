@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/navbar/Navbar'
 import Cards from '@/components/cards/Cards'
 import { useRouter } from 'next/router'
+import Footer from '@/components/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,7 @@ export default function Home() {
           query && <Cards title='search' />
         }
       </main>
+      <Footer />
       </>
   )
 }

@@ -6,8 +6,9 @@ import { CircularProgressbar,buildStyles  } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Reviews from '@/components/reviews/Reviews';
 import iso6391 from 'iso-639-1';
-// right arrow icon
 import { FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image'
+import Footer from '@/components/footer/Footer';
 
 const Movie = () => {
     const router = useRouter()
@@ -36,7 +37,8 @@ const Movie = () => {
             <Navbar />
             <div className={styles.wrapper}>
                 <div className={styles.leftWrapper}>
-                    <img src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt="" />
+                    {/* <img src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt="" /> */}
+                    <Image src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt='noImg' width={300} height={400} />
                     <button className={styles.btn} onClick={()=>window.open(`https://www.themoviedb.org/movie/${movie.id}`, '_blank')}>View on TMDB
                         <FaArrowRight className={styles.icon} />
                     </button>
@@ -101,6 +103,7 @@ const Movie = () => {
 
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
