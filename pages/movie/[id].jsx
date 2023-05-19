@@ -103,7 +103,7 @@ const Movie = () => {
 
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

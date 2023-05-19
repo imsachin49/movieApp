@@ -32,7 +32,7 @@ export default function Home() {
           query && <Cards title='search' />
         }
       </main>
-      <Footer />
+      {/* <Footer /> */}
       </>
   )
 }
