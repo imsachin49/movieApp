@@ -22,8 +22,8 @@
   height: 300px; 
   border-radius: 2px;
   overflow: hidden;
-  position: relative;
   border-bottom: none;
+  position: relative;
 }
 
 .imgContainer img {
@@ -32,6 +32,13 @@
   object-fit: cover;
   transition: all 0.3s ease-in-out;
   border: 1px solud rgb(221, 221, 221);
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .45rem;
 }
 
 .textContainer{

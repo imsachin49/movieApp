@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { useRouter } from 'next/router'
 import Navbar from '../../components/navbar/Navbar'
-import styles from './Movie.module.css'
 import { CircularProgressbar,buildStyles  } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Reviews from '@/components/reviews/Reviews';
@@ -10,6 +9,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image'
 import Footer from '@/components/footer/Footer';
 import Casts from '@/components/Casts/Casts';
+import styles from '../movie/Movie.module.css'
 
 const Movie = () => {
     const router = useRouter()
@@ -19,7 +19,7 @@ const Movie = () => {
     useEffect(() => {
         const getMovieInfo = async () => {
             try {
-                const res=await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=db75be3f6da59e6c54d0b9f568d19d16`)
+                const res=await fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=db75be3f6da59e6c54d0b9f568d19d16`)
                 const data=await res.json()
                 setMovie(data)
             } catch (error) {
@@ -38,7 +38,7 @@ const Movie = () => {
         if(movie?.poster_path){
             return `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`
         }else{
-            return 'https://www.movienewz.com/img/films/poster-holder.jpg'
+            return ''
         }
     }
     
@@ -54,7 +54,7 @@ const Movie = () => {
                 </div>
                 <div className={styles.rightWrapper}>
                     
-                    <h1 className={styles.movieTitle}>{movie?.title}</h1>
+                    <h1 className={styles.movieTitle}>{movie?.name}</h1>
                     
                     <p className={styles.original_title}> {movie?.original_title===movie.title ? "" : movie.original_title} ({iso6391.getName(movie.original_language)})</p>
                     
@@ -69,7 +69,7 @@ const Movie = () => {
                     <div className={styles.movieInfo}>
                         <div className={styles.movieInfoItem}>
                             <span className={styles.movieInfoKey}>Release Date:</span>
-                            <span className={styles.movieInfoValue}>{movie?.release_date}</span>
+                            <span className={styles.movieInfoValue}>{movie?.first_air_date}</span>
                         </div>
                         <div className={styles.movieInfoItem}>
                             <span className={styles.movieInfoKey}>Vote Average:</span>
@@ -79,7 +79,7 @@ const Movie = () => {
                             <span className={styles.movieInfoKey}>Vote Count:</span>
                             <span className={styles.movieInfoValue}>{movie?.vote_count}</span>
                         </div>
-                        <div className={styles.movieInfoItem}>
+                        {/* <div className={styles.movieInfoItem}>
                             <span className={styles.movieInfoKey}>Runtime:</span>
                             <span className={styles.movieInfoValue}>{movie?.runtime}</span>
                         </div>
@@ -90,7 +90,7 @@ const Movie = () => {
                         <div className={styles.movieInfoItem}>
                             <span className={styles.movieInfoKey}>Revenue:</span>
                             <span className={styles.movieInfoValue}>${movie?.revenue}</span>
-                        </div>
+                        </div> */}
                         <div className={styles.movieInfoItem}>
                             <span className={styles.movieInfoKey}>Popularity:</span>
                             <span className={styles.movieInfoValue}>{movie?.popularity}</span>
@@ -108,8 +108,8 @@ const Movie = () => {
                         </div>
                     </div>
 
-                    <Casts movieId={id} title='movie' />
-                    <Reviews id={id} title='movie' />
+                    <Casts movieId={id} title='tv' />
+                    <Reviews id={id} title='tv' />
 
                 </div>
             </div>

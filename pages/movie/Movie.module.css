@@ -97,7 +97,7 @@
     padding: 4px 7px;
     background-color: rgb(244, 51, 151);
     color: white;
-    width: 180px;
+    width: fit-content;
   }
   
   .genreContainer{
@@ -153,11 +153,13 @@
 .productionCompany{
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 1px;
+  margin: 2px;
   padding: 2px 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: solid;
-  border: 1px solid aqua;
+  /* border: 1px solid aqua; */
+  background-color: white;
+  color: black;
 }
 
 
@@ -185,10 +187,6 @@
   
   .overview {
     font-size: 14px;
-  }
-  
-  .movieInfoItem {
-    flex: 0 0 100%;
   }
 }
   

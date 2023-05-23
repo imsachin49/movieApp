@@ -1,0 +1,45 @@
+.castsContainer{
+    width:100%;
+    margin-top: 2rem;
+}
+
+.castsWrapper{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.cast{
+    /* width: 90px;
+    height: 90px;
+    border:1px solid red; */
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0rem;
+    margin: .5rem;
+    border-radius: 1rem;
+}
+
+.cast img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.cast h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem;
+    text-align: center;
+}
