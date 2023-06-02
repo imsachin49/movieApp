@@ -88,32 +88,3 @@
   align-items: center;
   font-weight: bold;
 }
-
-@media screen and (max-width:400px) {
-  .loginModal{
-    width: 250px;
-  }
-  .formGroup input{
-    width: 240px;
-  }
-  .btn{
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 19px;
-    padding-right: 19px;
-  }
-}
-
-@media screen and (max-width:330px) {
-  .loginModal{
-    width: 200px;
-  }
-  .formGroup input{
-    width: 190px;
-  }
-  .btn{
-    width: 200px;
-  }
-}
